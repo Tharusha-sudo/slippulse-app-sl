@@ -1,4 +1,9 @@
-streamlit
+gradio
+pillow
 requests
-pandas
+numpy
+opencv-python-headless
 easyocr
+torch
+torchvision
+
