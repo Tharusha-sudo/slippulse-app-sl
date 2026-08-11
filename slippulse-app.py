@@ -9,15 +9,15 @@ from PIL import Image
 import io
 import re
 
-# 1. Page Configuration (අලුත් Logo Link එක සහ App Title එක)
+# 1. Page Configuration (අලුත් Image File Name එක සමඟ)
 st.set_page_config(
     page_title="SlipPulse - AI Payment & Verification",
-    page_icon="https://i.imgur.com/wKa9RmE.png",
+    page_icon="IMG-20260811-WA5696.jpg",
     layout="wide",
     initial_sidebar_state="expanded"
 )
 
-# Custom Styling (Dark theme & Professional UI)
+# Custom UI Styling
 st.markdown("""
     <style>
     .main {
@@ -85,7 +85,7 @@ def init_db():
 
 init_db()
 
-# 3. Session State
+# 3. Session State Initialization
 if "authenticated" not in st.session_state:
     st.session_state.authenticated = False
 if "user_id" not in st.session_state:
@@ -148,8 +148,8 @@ if not st.session_state.authenticated:
                 st.warning("Please fill in all fields.")
 
 else:
-    # Sidebar with Logo
-    st.sidebar.image("https://i.imgur.com/wKa9RmE.png", width=110)
+    # Sidebar Navigation & Logo Display
+    st.sidebar.image("IMG-20260811-WA5696.jpg", width=110)
     st.sidebar.title(f"🏢 {st.session_state.business_name}")
     menu = st.sidebar.radio("Navigation", ["📊 Dashboard", "📄 Create Invoice (Crypto)", "📸 Scan Slip (AI OCR)", "⚙️ Account"])
     
